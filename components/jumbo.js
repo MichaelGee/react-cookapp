@@ -1,5 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
+import Link from "next/link";
+
 const Jumbo = () => (
   <Layout>
     <div>
@@ -11,9 +13,9 @@ const Jumbo = () => (
             </div>
             <div className='col-6'>
               <p className='signup text-right' data-target='modal1'>
-                <a data-toggle='modal' data-target='#exampleModal'>
-                  Sign up
-                </a>
+                <Link href='/signup'>
+                  <a>Sign up</a>
+                </Link>
               </p>
             </div>
           </div>
@@ -30,13 +32,18 @@ const Jumbo = () => (
         }
 
         .jumbotron {
-          background-color: #e61c5d !important;
+          background-color: #009688 !important;
           color: white !important;
         }
 
         .introtext {
           margin-top: 70px;
           color: white;
+        }
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 1.2rem;
         }
       `}</style>
     </div>
